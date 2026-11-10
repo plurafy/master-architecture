@@ -63,3 +63,4 @@ pnpm-debug.log*
 .eslintcache
 coverage/
 *.tsbuildinfo
+.DS_Store

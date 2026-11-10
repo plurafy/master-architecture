@@ -12,7 +12,7 @@ class Observer(ABC):
         self.subscribed_channels = []
 
     @abstractmethod
-    def notify(self, channel_name: str, video_title: str):
+    def notify(self, subject_name: str, subject_title: str):
         pass
 
 
@@ -26,14 +26,14 @@ class Subject(ABC):
         pass
 
     @abstractmethod
-    def notify(self, video_title: str):
+    def notify(self, subject_title: str):
         pass
 
 
 class User(Observer):
-    def notify(self, channel_name: str, video_title: str):
+    def notify(self, subject_name: str, subject_title: str):
         print(
-            f"🔔 {self.username} has been notified about a new video '{video_title}' on {channel_name}."
+            f"🔔 {self.username} has been notified about a new video '{subject_title}' on {subject_name}."
         )
 
 
@@ -59,9 +59,9 @@ class YouTubeChannel(Subject):
         else:
             print(f"👤 {observer.username} is not subscribed to {self.name}.")
 
-    def notify(self, video_title: str):
+    def notify(self, subject_title: str):
         for subscriber in self.subscribers:
-            subscriber.notify(self.name, video_title)
+            subscriber.notify(self.name, subject_title)
 
 
 if __name__ == "__main__":
