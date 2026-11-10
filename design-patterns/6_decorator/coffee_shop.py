@@ -1,9 +1,9 @@
-from abc import ABC, abstractmethod
-
 """
 Decorator pattern example for a coffee shop.
 Allows adding ingredients like milk and sugar dynamically to a coffee order.
 """
+
+from abc import ABC, abstractmethod
 
 
 class Coffee(ABC):

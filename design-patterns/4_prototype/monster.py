@@ -1,11 +1,11 @@
-from abc import ABC, abstractmethod
-from copy import deepcopy
-
 """
 Prototype Design Pattern: This pattern is used to create new objects by copying an existing object, known as the prototype. It is useful when the cost of creating a new object is expensive or complex.
 
 Example: If creating a new monster from scratch is costly, we can clone an existing monster prototype and modify it as needed.
 """
+
+from abc import ABC, abstractmethod
+from copy import deepcopy
 
 
 class MonsterPrototype(ABC):

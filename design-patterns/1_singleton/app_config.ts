@@ -1,4 +1,6 @@
 class AppConfig {
+  private static instance: AppConfig;
+
   constructor() {
     if (AppConfig.instance) {
       return AppConfig.instance;
